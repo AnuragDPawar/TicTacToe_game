@@ -1,5 +1,6 @@
 package TicTacToe;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Game {
 			}
 			placePosition(gameBoard,playerPos,"player");
 			printGameboard(gameBoard);
-			Random rd = new Random();
+			Random rd = new SecureRandom();
 			int cpuPos = rd.nextInt(9)+1;
 			while(cpuPositions.contains(cpuPos)|| playerPositions.contains(cpuPos))
 			{
